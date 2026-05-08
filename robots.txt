@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Allow Facebook Crawler
+User-agent: facebookexternalhit
+Allow: /
