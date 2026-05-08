@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shishir | Full Stack & Android Developer</title>
+    <meta name="description"
+        content="Portfolio of Shishir, a professional Software and Android App Developer. Premium quality apps and web solutions.">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00f2fe',
+                        secondary: '#4facfe',
+                        accent: '#7000ff',
+                        dark: '#050505',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+
+<body class="bg-dark text-white selection:bg-primary selection:text-dark">
+
+    <!-- Preloader -->
+    <div id="loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-dark">
+        <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="fixed top-4 w-full z-50 px-6 flex justify-center">
+        <nav class="glass rounded-full border border-white/20 transition-all duration-300 w-full max-w-7xl shadow-xl shadow-black/50"
+            id="navbar">
+            <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold font-heading text-gradient">SHISHIR.DEV</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-sm font-medium hover:text-primary transition">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium hover:text-primary transition">About</a>
+                    <a href="#skills" class="nav-link text-sm font-medium hover:text-primary transition">Skills</a>
+                    <a href="#projects" class="nav-link text-sm font-medium hover:text-primary transition">Projects</a>
+                    <a href="#services" class="nav-link text-sm font-medium hover:text-primary transition">Services</a>
+                    <a href="#contact"
+                        class="px-5 py-2 rounded-full bg-gradient-main text-dark font-bold text-sm hover:scale-105 transition active:scale-95 shadow-[0_0_15px_rgba(0,242,254,0.4)]">Hire
+                        Me</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="md:hidden text-2xl focus:outline-none" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars-staggered text-primary"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden glass rounded-3xl border border-white/10 absolute w-[calc(100%-3rem)] top-16 left-6 py-8 px-6 flex flex-col space-y-4 shadow-2xl z-40">
+                <a href="#home" class="mobile-nav-link text-lg font-medium">Home</a>
+                <a href="#about" class="mobile-nav-link text-lg font-medium">About</a>
+                <a href="#skills" class="mobile-nav-link text-lg font-medium">Skills</a>
+                <a href="#projects" class="mobile-nav-link text-lg font-medium">Projects</a>
+                <a href="#services" class="mobile-nav-link text-lg font-medium">Services</a>
+                <a href="#contact"
+                    class="w-full text-center py-3 rounded-xl bg-gradient-main text-dark font-bold">Contact Me</a>
+            </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-32 relative overflow-hidden">
+        <div class="hero-glow top-0 -left-20"></div>
+        <div class="hero-glow bottom-0 -right-20"></div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h5 class="text-primary font-bold tracking-widest mb-4">WELCOME TO MY WORLD</h5>
+                <h1 class="text-5xl md:text-7xl font-bold font-heading mb-6">
+                    Hi, I'm <span class="text-gradient" id="hero-name"></span><br>
+                    <span id="typewriter" class="text-3xl md:text-5xl opacity-80"></span>
+                </h1>
+                <p id="hero-intro" class="text-text-muted text-lg mb-8 max-w-lg leading-relaxed"></p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="px-8 py-4 rounded-full bg-gradient-main text-dark font-bold hover:scale-105 transition shadow-lg">View
+                        Projects</a>
+                    <a href="#" id="download-resume"
+                        class="px-8 py-4 rounded-full border border-white/20 hover:border-primary transition glass flex items-center gap-2">
+                        <i class="fa-solid fa-download text-primary"></i> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="w-72 h-72 md:w-96 md:h-96 rounded-3xl rotate-6 absolute border-2 border-primary/30 z-0">
+                </div>
+                <div class="w-72 h-72 md:w-96 md:h-96 rounded-3xl -rotate-3 absolute border-2 border-accent/30 z-0">
+                </div>
+                <img id="profile-img" src="" alt="Profile"
+                    class="w-72 h-72 md:w-96 md:h-96 object-cover object-top rounded-3xl glass-card relative z-10 shadow-2xl animate-float">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative p-4">
+                        <div class="absolute inset-0 bg-primary/10 blur-3xl -z-10 rounded-full"></div>
+                        <h2 class="text-4xl font-bold font-heading mb-6 border-l-4 border-primary pl-4">About Me</h2>
+                        <p id="about-text" class="text-text-muted text-lg leading-relaxed mb-8"></p>
+
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="glass-card p-4 rounded-2xl">
+                                <h3 id="exp-count" class="text-2xl font-bold text-primary"></h3>
+                                <p class="text-xs text-text-muted uppercase tracking-wider">Experience</p>
+                            </div>
+                            <div class="glass-card p-4 rounded-2xl">
+                                <h3 id="project-count" class="text-2xl font-bold text-primary"></h3>
+                                <p class="text-xs text-text-muted uppercase tracking-wider">Projects</p>
+                            </div>
+                            <div class="glass-card p-4 rounded-2xl">
+                                <h3 id="client-count" class="text-2xl font-bold text-primary"></h3>
+                                <p class="text-xs text-text-muted uppercase tracking-wider">Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6" data-aos="fade-left">
+                    <div class="glass-card p-6 rounded-3xl">
+                        <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-graduation-cap text-primary"></i> Journey
+                        </h4>
+                        <p id="about-journey" class="text-text-muted leading-relaxed">
+                        </p>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl">
+                        <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-bullseye text-primary"></i> Goals
+                        </h4>
+                        <p id="about-goals" class="text-text-muted leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-black/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title">My <span class="text-gradient">Expertise</span></h2>
+                <p class="text-text-muted max-w-2xl mx-auto -mt-8">I specialize in a wide range of technologies to build
+                    complete digital ecosystems.</p>
+            </div>
+
+            <div id="skills-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skills injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6" data-aos="fade-up">
+                <div>
+                    <h2 class="text-4xl font-bold font-heading mb-4">Latest <span class="text-gradient">Projects</span>
+                    </h2>
+                    <p class="text-text-muted">A showcase of my recent work across mobile and web.</p>
+                </div>
+
+
+            </div>
+
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-black/30">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title" data-aos="fade-up">Premium <span class="text-gradient">Services</span></h2>
+
+            <div id="services-container" class="grid md:grid-cols-3 gap-8 mt-12">
+                <!-- Services injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-aos="fade-up">Professional <span class="text-gradient">Timeline</span></h2>
+
+            <div class="relative max-w-4xl mx-auto mt-20">
+                <!-- Vertical Line -->
+                <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-white/10"></div>
+
+                <div id="experience-container" class="space-y-12">
+                    <!-- Timeline items injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative">
+        <div class="container mx-auto px-6">
+            <div class="glass rounded-[3rem] p-8 md:p-16 overflow-hidden relative">
+                <div class="hero-glow -top-20 -right-20 opacity-50"></div>
+
+                <div class="grid md:grid-cols-2 gap-16 relative z-10">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-bold font-heading mb-6">Let's <span class="text-gradient">Work
+                                Together</span></h2>
+                        <p class="text-text-muted mb-10 leading-relaxed">Have a project in mind? Reach out and let's
+                            turn your ideas into reality. I'm available for freelance and full-time opportunities.</p>
+
+                        <div class="space-y-6">
+                            <a href="#" id="contact-email" class="flex items-center gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl glass flex items-center justify-center group-hover:bg-primary transition duration-300">
+                                    <i class="fa-solid fa-envelope text-primary group-hover:text-dark"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-text-muted uppercase tracking-widest font-bold">Email Me</p>
+                                    <p class="text-lg font-medium email-text"></p>
+                                </div>
+                            </a>
+                            <a href="#" id="contact-whatsapp" class="flex items-center gap-4 group">
+                                <div
+                                    class="w-12 h-12 rounded-2xl glass flex items-center justify-center group-hover:bg-[#25D366] transition duration-300">
+                                    <i class="fa-brands fa-whatsapp text-[#25D366] group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-text-muted uppercase tracking-widest font-bold">WhatsApp</p>
+                                    <p class="text-lg font-medium">+8801741043027</p>
+                                </div>
+                            </a>
+                            <div class="pt-6 flex gap-4">
+                                <a href="#" id="github-link"
+                                    class="w-12 h-12 rounded-xl glass flex items-center justify-center hover:scale-110 transition"><i
+                                        class="fa-brands fa-github text-xl"></i></a>
+                                <a href="#" id="linkedin-link"
+                                    class="w-12 h-12 rounded-xl glass flex items-center justify-center hover:scale-110 transition text-[#0077b5]"><i
+                                        class="fa-brands fa-linkedin text-xl"></i></a>
+                                <a href="#" id="facebook-link"
+                                    class="w-12 h-12 rounded-xl glass flex items-center justify-center hover:scale-110 transition text-[#1877f2]"><i
+                                        class="fa-brands fa-facebook text-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left">
+                        <form id="contact-form" action="https://formsubmit.co/shishir734427@gmail.com" method="POST"
+                            class="space-y-6">
+                            <!-- Hidden Honeypot to prevent spam -->
+                            <input type="text" name="_honey" style="display:none">
+                            <!-- Disable Captcha (Optional) -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Success Page -->
+                            <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2 opacity-60">Full Name</label>
+                                    <input type="text" name="name" required
+                                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-primary outline-none transition"
+                                        placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2 opacity-60">Email Address</label>
+                                    <input type="email" name="email" required
+                                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-primary outline-none transition"
+                                        placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 opacity-60">Project Type</label>
+                                <select name="type"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-primary outline-none transition">
+                                    <option class="bg-dark">Android App</option>
+                                    <option class="bg-dark">Web Development</option>
+                                    <option class="bg-dark">UI/UX Design</option>
+                                    <option class="bg-dark">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 opacity-60">Your Message</label>
+                                <textarea name="message" required rows="4"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-primary outline-none transition"
+                                    placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-4 rounded-xl bg-gradient-main text-dark font-bold hover:scale-[1.02] active:scale-95 transition shadow-xl">Send
+                                Message <i class="fa-solid fa-paper-plane ml-2"></i></button>
+                        </form>
+                        <div id="form-status" class="mt-4 hidden text-center p-3 rounded-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold font-heading text-gradient mb-6">SHISHIR.DEV</h2>
+            <div class="flex justify-center gap-8 mb-8 text-sm font-medium text-text-muted">
+                <a href="#home" class="hover:text-primary">Home</a>
+                <a href="#about" class="hover:text-primary">About</a>
+                <a href="#projects" class="hover:text-primary">Projects</a>
+                <a href="#services" class="hover:text-primary">Services</a>
+            </div>
+            <p class="text-text-muted text-sm">&copy; <span id="current-year"></span> Shishir. All Rights Reserved.</p>
+            <button onclick="window.scrollTo(0,0)"
+                class="mt-8 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center mx-auto hover:border-primary text-primary transition">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data/portfolioData.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
