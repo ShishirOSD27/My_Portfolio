@@ -231,8 +231,8 @@ function setupMobileMenu() {
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
         btn.innerHTML = menu.classList.contains('hidden')
-            ? '<i class="fa-solid fa-bars-staggered text-primary"></i>'
-            : '<i class="fa-solid fa-xmark text-primary"></i>';
+            ? '<i class="fa-solid fa-bars"></i>'
+            : '<i class="fa-solid fa-xmark"></i>';
     });
 
     links.forEach(link => {
