@@ -5,12 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
     setTimeout(() => {
         loader.classList.add('opacity-0');
-        setTimeout(() => loader.style.display = 'none', 300);
+        setTimeout(() => {
+            loader.style.display = 'none';
+            AOS.refresh();
+        }, 300);
     }, 500);
 
     // Initialize Animations
     AOS.init({
-        duration: 600,
+        duration: 400,
         once: true,
         mirror: false
     });

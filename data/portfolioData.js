@@ -16,7 +16,7 @@ const portfolioData = {
     github: "https://github.com/ShishirOSD27",
     linkedin: "https://www.linkedin.com/in/md-shishir-a796a035b/",
     facebook: "https://www.facebook.com/Md.Shishir27",
-    whatsapp: "https://wa.me/01741043027",
+    whatsapp: "https://wa.me/+8801741043027",
     email: "shishir734427@gmail.com"
   },
   skills: [
