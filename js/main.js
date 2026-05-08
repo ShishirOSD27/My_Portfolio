@@ -1,22 +1,26 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Animations immediately
+    AOS.init({
+        duration: 500,
+        once: true,
+        mirror: false,
+        offset: 0,
+        disableMutationObserver: false
+    });
+
     // Hide Loader
     const loader = document.getElementById('loader');
     setTimeout(() => {
         loader.classList.add('opacity-0');
         setTimeout(() => {
             loader.style.display = 'none';
+            // Force refresh multiple times to ensure visibility
             AOS.refresh();
+            window.dispatchEvent(new Event('resize'));
         }, 300);
     }, 500);
-
-    // Initialize Animations
-    AOS.init({
-        duration: 400,
-        once: true,
-        mirror: false
-    });
 
     // Populate Data
     populatePersonalInfo();
