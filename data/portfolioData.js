@@ -52,24 +52,24 @@ const portfolioData = {
       category: "Android",
       description: "A fully customizable note app with firebase integration .",
       tech: ["Java", "Firebase", "Stripe API"],
-      features: [" List Note", "Search Note", "Firebase Authentication"],
-      image: "assets/BMI.jpg",
+      features: [" List Note", "Search Note", "Store video", "Store notes with image and sound"],
+      image: "assets/Note.png",
       github: "#",
       live: "#",
       apk: "https://drive.google.com/drive/folders/1Mnc37oNJtMzgneUKq3FG_Zt1y6fhdyIu"
     },
 
     {
-      id: 3,
-      title: "Fitness Tracker",
+      id: 2,
+      title: "BMi Calculator",
       category: "Android",
-      description: "Mobile app to track daily steps, calories, and health goals with interactive charts.",
-      tech: ["Java", "Google Fit API", "SQLite"],
-      features: ["Step Counter", "Calorie Tracker", "Goal Reminders"],
-      image: "https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&q=80&w=800",
+      description: "A fully customizable bmi calculator app.",
+      tech: ["Java", "XML"],
+      features: ["Calculate BMI", "Display Bmi Result"],
+      image: "assets/BMI.jpg",
       github: "#",
       live: "#",
-      apk: "#"
+      apk: "https://drive.google.com/drive/folders/1Mnc37oNJtMzgneUKq3FG_Zt1y6fhdyIu"
     }
   ],
   experience: [
